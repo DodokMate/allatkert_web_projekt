@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+}
+
+#fejlec_div {
+    background-image: url(img/elefant_header.jpg);
+    background-size: 100%;
+    background-position: 0vh 85vh;
+    height: 85vh;
+    color: white;
+}
+
+#logo {
+    width: 20vw;
+    position: absolute;
+    top: -4vw;
+    left: 4.25vw;
+    z-index: 1;
+}
+
+#arnyek_div {
+    height: 85vh;
+    background-image: linear-gradient(90deg, black, transparent, transparent);
+}
+
+#menu_div {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), transparent, transparent);
+    width: 100%;
+    margin: 0;
+    padding: 5vw 0;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: -3vw;
+    margin-left: -5vw;
+}
+
+#fooldal_link,
+.linkek {
+    color: white;
+    padding: 1vw;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-weight: bold;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: 1s;
+}
+
+#fooldal_link {
+    color: #7db614;
+    margin-left: 2vw;
+}
+
+#fooldal_link:hover,
+.linkek:hover {
+    color: #ffbd59;
+    text-decoration: underline;
+}
+
+#focim_div {
+    width: 35vw;
+    height: 18vw;
+    margin-top: 0;
+    margin-left: 6.5vw;
+    font-size: 3.5vw;
+}
+
+#focim {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: -1vw;
+}
+
+#focim1 {
+    margin-top: -6.5vw;
+    margin-left: 3.5vw;
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffbd59;
+}
+
+#fejlec_szoveg_div {
+    width: 30vw;
+    margin-top: -1vw;
+    margin-left: 6.5vw;
+    font-size: 1.8vw;
+    padding: 0.5vw;
+    line-height: 3vw;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+mark{
+    color: white;
+    background-color: #7db614;
+}
+
+#cimke_div {
+    display: flex;
+    position: absolute;
+    left: 45vw;
+    top: 38vw;
+}
+
+#cimke_div div {
+    width: 15vw;
+    height: 10vw;
+    margin: 0 1vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 2vw;
+    text-align: center;
+    line-height: 10vw;
+    font-size: 1.5vw;
+    font-family: "Oswald", sans-serif;
+}
+
+#cimke_div div:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: ease 1s;
+    color: #ffbd59;
+}
+
+#adatok_div {
+    background-color: #2b542e;
+    color: white;
+    margin: 0;
+}
+
+#copyright {
+    text-align: center;
+    font-size: 0.8em;
+}
