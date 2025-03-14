@@ -1,0 +1,20 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const fejlecDiv = document.getElementById("fejlec_div");
+    const images = [
+        "img/elefant_header.jpg",
+        "img/bohochal_header.jpg",
+        "img/feher_tigris_header.jpg",
+        "img/raja_header.jpg",
+        "img/zsiraf_header.jpg",
+        "img/voros_panda_header.jpg"
+    ];
+    let index = 0;
+
+    function changeBackground() {
+        index = (index + 1) % images.length;
+        fejlecDiv.style.transition = "background-image 1.5s ease-in-out";
+        fejlecDiv.style.backgroundImage = `url(${images[index]})`;
+    }
+
+    setInterval(changeBackground, 5000);
+});
