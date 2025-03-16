@@ -22,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Doodle+Shadow&family=Rubik+Mono+One&family=Train+One&family=Zen+Dots&display=swap"
-        rel="stylesheet">        
+        rel="stylesheet">
     <!------------------>
 
     <link rel="stylesheet" href="style.css">
@@ -31,60 +31,85 @@
 </head>
 
 <body>
-    <div id="fejlec_div">
+    <!--Fejléc div-->
+    <div class="container">
+        <div id="fejlec_div">
 
-        <img src="img/ZOO.png" alt="" id="logo">
+            <img src="img/ZOO.png" alt="" id="logo">
+            <img src="img/kosar.png" alt="" id="kosar_img">
 
-        <div id="arnyek_div">
+            <div id="arnyek_div">
 
-            <div id="menu_div">
-                <ul id="menu">
-                    <li><a id="fooldal_link" href="fooldal">Főoldal</a></li>
-                    <li><a class="linkek" href="jegyarak">Jegyárak</a></li>
-                    <li><a class="linkek" href="zoo">Állatkert</a></li>
-                    <li><a class="linkek" href="nyitvatartas">Nyitvatartás</a></li>
-                    <li><a class="linkek" href="kapcsolat">Kapcsolat</a></li>
-                </ul>
+                <div id="menu_div">
+                    <ul id="menu">
+                        <li><a id="fooldal_link" href="fooldal">Főoldal</a></li>
+                        <li><a class="linkek" href="jegyarak">Jegyárak</a></li>
+                        <li><a class="linkek" href="zoo">Állatkert</a></li>
+                        <li><a class="linkek" href="nyitvatartas">Nyitvatartás</a></li>
+                        <li><a class="linkek" href="kapcsolat">Kapcsolat</a></li>
+                    </ul>
+                </div>
+
+                <div id="focim_div">
+                    <h1 id="focim">Budapest</h1>
+                    <h1 id="focim1">ZOO</h1>
+                </div>
+
+                <div id="fejlec_szoveg_div">
+                    <p>
+                        Szeretettel várjuk kedves látogatóinkat, akik <mark> több mint 1000 </mark> állatfajt
+                        fedezhetnek fel egy <mark> nagyszerű élmény </mark> keretén belül!
+                    </p>
+                </div>
+
+                <button id="fejlec_jegy_gomb">Jegyek</button>
+
+                <a href="#fejlec_div"><img src="img/felfele_nyil.png" alt="" id="felfele_nyil_ikon"></a>
+            </div>
+        </div>
+
+        <!--Bemutatkozó div-->
+        <div id="bemutatkozas_div">
+            <h3 id="bemutatkozas_cim">Járd körbe <br> a parkot és deríts fel minden <br> érdekességet</h3>
+            <h2 id="bemutatkozas_alcim">Fedezd</h2>
+            <h2 id="bemutatkozas_alcim1">Fel!</h2>
+
+            <img src="img/madar.png" alt="" id="madar_png">
+
+            <div id="bemutatkozo_kartyak_div">
+                <div class="kartya_div">
+                    <img src="img/zsiraf_kartya.jpg" class="bemutatkozo_kepek" alt="">
+                    <p>
+                        <strong>Etetés</strong> <br> <br>
+                        Néhány állatunk szereti ha látogatóink kezéből csemegézhetnek.
+                    </p>
+                </div>
+
+                <div class="kartya_div">
+                    <img src="img/alagut_kartya.jpeg" class="bemutatkozo_kepek" alt="">
+                    <p>
+                        <strong>Merülj alá!</strong> <br> <br>
+                        A víz alatti alagútban találkozhatnak a látogatók a különböző halakkal, rájákkal és cápákkal is!
+                    </p>
+                </div>
+
+                <div class="kartya_div">
+                    <img src="img/biodom_kartya.jpg" class="bemutatkozo_kepek" alt="">
+                    <p>
+                        <strong>Biodóm</strong> <br> <br>
+                        A biodóm különleges burka alatt a látogatókra sok izgalmas kiállítás vár.
+                    </p>
+                </div>
             </div>
 
-            <div id="focim_div">
-                <h1 id="focim">Budapest</h1>
-                <h1 id="focim1">ZOO</h1>
-            </div>
+            <img src="img/kenguru.png" alt="" id="kenguru_png">
+        </div>
 
-            <div id="fejlec_szoveg_div">
-                <p>
-                    Szeretettel várjuk kedves látogatóinkat, akik <mark> több mint 1000 </mark> állatfajt
-                    fedezhetnek fel egy <mark> nagyszerű élmény </mark> keretén belül!
-                </p>
-            </div>
-
-            
-            <!--div id="cimke_div">
-                <div>TÉRKÉP</div>
-                <div></div>
-                <div></div>
-            </div-->
+        <!--Jegyárak div-->
+        <div id="jegyarak_div">
+    
         </div>
     </div>
-
-    <div>
-        <div>
-            <h2>Üdvözöljük a Budapest - ZOO honlapján!</h2>
-        </div>
-    </div>
-
-    <div></div>
-    <div></div>
-    <div></div>
-
-    <div id="adatok_div">
-        <p>1146 Budapest, <br> Állatkerti krt. 6-12.</p>
-        <p>Telefonszám: +36-30-846-2371</p>
-        <p>E-mail cím: budapestzoo@gmail.com</p>
-        <p id="copyright">&copy; 2025 Budapest - ZOO (Dodok Máté - Kmetty Ákos)</p>
-    </div>
-
 </body>
 
 </html>

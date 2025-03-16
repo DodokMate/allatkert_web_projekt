@@ -1,13 +1,21 @@
 body {
     margin: 0;
+    padding: 0;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*A főoldal fejlécének formázásai*/
 #fejlec_div {
-    background-image: url(img/elefant_header.jpg);
-    background-size: 100%;
-    background-position: 0vh 85vh;
-    height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
     color: white;
+    box-shadow: 0 1vw 2vw black;
 }
 
 #logo {
@@ -18,8 +26,21 @@ body {
     z-index: 1;
 }
 
+#kosar_img {
+    width: 4vw;
+    position: absolute;
+    top: 1.2vw;
+    left: 85vw;
+    border-left: 0.25vw solid orange;
+    padding: 0 0 0 1vw;
+}
+
+#kosar_img:hover {
+    transform: scale(1.1);
+}
+
 #arnyek_div {
-    height: 85vh;
+    height: 100vh;
     background-image: linear-gradient(90deg, black, transparent, transparent);
 }
 
@@ -53,7 +74,7 @@ body {
 
 #fooldal_link {
     color: #7db614;
-    margin-left: 2vw;
+    margin-left: 2.5vw;
 }
 
 #fooldal_link:hover,
@@ -90,7 +111,7 @@ body {
 #fejlec_szoveg_div {
     width: 30vw;
     margin-top: -1vw;
-    margin-left: 6.5vw;
+    margin-left: 6.35vw;
     font-size: 1.8vw;
     padding: 0.5vw;
     line-height: 3vw;
@@ -100,35 +121,154 @@ body {
     font-style: normal;
 }
 
-mark{
+mark {
     color: white;
     background-color: #7db614;
 }
 
-#cimke_div {
-    display: flex;
+#fejlec_jegy_gomb {
+    width: 7vw;
+    height: 3vw;
     position: absolute;
-    left: 45vw;
-    top: 38vw;
-}
-
-#cimke_div div {
-    width: 15vw;
-    height: 10vw;
-    margin: 0 1vw;
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 2vw;
-    text-align: center;
-    line-height: 10vw;
-    font-size: 1.5vw;
+    left: 6.35vw;
+    background-color: #ffbd59;
+    color: white;
+    border: 0.5vw solid #ffbd59;
+    border-radius: 0.5vw;
     font-family: "Oswald", sans-serif;
+    letter-spacing: 0.1vw;
+    font-size: 1.3vw;
+    font-weight: bold;
+    box-shadow: 0vw 0vw 1vw rgb(0, 0, 0);
 }
 
-#cimke_div div:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: ease 1s;
-    color: #ffbd59;
+#fejlec_jegy_gomb:hover {
+    background-color: #7db614;
+    color: white;
+    border: 0.5vw solid #7db614;
 }
+
+#felfele_nyil_ikon {
+    width: 3.5vw;
+    position: fixed;
+    top: 90vh;
+    left: 92.5vw;
+}
+
+#felfele_nyil_ikon:hover {
+    transform: scale(1.1);
+}
+
+/*A bemutatkozás szekció formázásai*/
+#bemutatkozas_div {
+    margin-top: 0;
+    height: 150vh;
+    background-image: url("img/hatter.png");
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+#bemutatkozas_cim{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: black;
+    font-size: 3.5vw;
+    margin-top: 7vw;
+    position: absolute;
+    left: 30vw;
+    text-align: center;
+    
+
+}
+
+#bemutatkozas_alcim{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15vw;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 47.5vw;
+    left: 10vw;
+    opacity: 0.7;
+    z-index: -1;
+    color: rgba(79, 112, 81, 0.650);
+}
+
+#bemutatkozas_alcim1{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15vw;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 60vw;
+    left: 45vw;
+    opacity: 0.7;
+    z-index: -1;
+    color: rgb(79, 112, 81, 0.650);
+}
+
+#madar_png{
+    width: 30vw;
+    position: absolute;
+    top: 52.5vw;
+    left: 68.75vw;
+}
+
+#bemutatkozo_kartyak_div{
+    display: flex;
+    justify-content: center;
+    margin-top: 26.5vw;
+    padding: 0;
+}
+
+.kartya_div{
+    width: 20vw;
+    height: 30vw;
+    margin: 0 2vw;
+    border-top-left-radius: 2.5vw;
+    border-top-right-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 2.5vw;
+    box-shadow: 0 0 1vw black;
+    background-color: white;
+}
+
+.kartya_div p{
+    font-size: 1.5vw;
+    padding: 0.5vw;
+    line-height: 2vw;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(85, 85, 85);
+}
+
+.bemutatkozo_kepek{
+    width: 20vw;
+    height: 15vw;
+    margin: 0;
+    border-top-left-radius: 2.5vw;
+    border-top-right-radius: 1vw;
+    box-shadow: 0 0 1vw black;
+}
+
+#kenguru_png{
+    width: 30vw;
+    height: 20vw;
+    margin: 2vw 0;
+}
+
+/*A jegyek szekció formázásai*/
 
 #adatok_div {
     background-color: #2b542e;
