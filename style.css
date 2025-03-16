@@ -31,11 +31,22 @@ body {
     position: absolute;
     top: 1.2vw;
     left: 85vw;
-    border-left: 0.25vw solid orange;
     padding: 0 0 0 1vw;
 }
 
 #kosar_img:hover {
+    transform: scale(1.1);
+}
+
+#jegy_img{
+    width: 4vw;
+    position: absolute;
+    top: 1.2vw;
+    left: 90vw;
+    padding: 0 0 0 1vw;
+}
+
+#jegy_img:hover {
     transform: scale(1.1);
 }
 
@@ -163,74 +174,86 @@ mark {
 #bemutatkozas_div {
     margin-top: 0;
     height: 150vh;
-    background-image: url("img/hatter.png");
+    background-image: url("img/green-watercolor-texture-recycled-paper.jpg");
     background-size: cover;
     background-repeat: repeat;
     z-index: -1;
 }
 
-#bemutatkozas_cim{
+#bemutatkozas_cim {
     font-family: "Oswald", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
-    color: black;
+    color: white;
     font-size: 3.5vw;
     margin-top: 7vw;
     position: absolute;
-    left: 30vw;
+    left: 29vw;
     text-align: center;
-    
-
+    text-shadow: 2vw 2vw 2vw black;
 }
 
-#bemutatkozas_alcim{
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
+#bemutatkozas_alcim {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
     font-style: normal;
+    color: #ffbd59;
     font-size: 15vw;
-    margin: 0;
+    margin: 1vw 0;
     padding: 0;
     position: absolute;
-    top: 47.5vw;
     left: 10vw;
     opacity: 0.7;
     z-index: -1;
-    color: rgba(79, 112, 81, 0.650);
 }
 
-#bemutatkozas_alcim1{
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
+#bemutatkozas_alcim1 {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
     font-style: normal;
+    color: #ffbd59;
     font-size: 15vw;
-    margin: 0;
+    margin: 13vw 0;
     padding: 0;
     position: absolute;
-    top: 60vw;
     left: 45vw;
     opacity: 0.7;
     z-index: -1;
-    color: rgb(79, 112, 81, 0.650);
 }
 
+/*
 #madar_png{
     width: 30vw;
+    margin-top: 2vw;
     position: absolute;
-    top: 52.5vw;
-    left: 68.75vw;
+    left: 68.72vw;
+}
+*/
+
+#levelek_png {
+    width: 20vw;
+    position: absolute;
+    left: 78.72vw;
+    filter: drop-shadow(2vw 1vw 1vw #222);
 }
 
-#bemutatkozo_kartyak_div{
+#kameleon_png {
+    width: 39vw;
+    margin-top: 3vw;
+    position: absolute;
+    left: 59.72vw;
+    filter: drop-shadow(2vw 1vw 1vw #222);
+}
+
+#bemutatkozo_kartyak_div {
     display: flex;
     justify-content: center;
-    margin-top: 26.5vw;
+    margin-top: 29.5vw;
     padding: 0;
 }
 
-.kartya_div{
+.kartya_div {
     width: 20vw;
     height: 30vw;
     margin: 0 2vw;
@@ -242,7 +265,7 @@ mark {
     background-color: white;
 }
 
-.kartya_div p{
+.kartya_div p {
     font-size: 1.5vw;
     padding: 0.5vw;
     line-height: 2vw;
@@ -253,7 +276,7 @@ mark {
     color: rgb(85, 85, 85);
 }
 
-.bemutatkozo_kepek{
+.bemutatkozo_kepek {
     width: 20vw;
     height: 15vw;
     margin: 0;
@@ -262,21 +285,145 @@ mark {
     box-shadow: 0 0 1vw black;
 }
 
+#koala_png {
+    width: 20vw;
+    margin: -15vw 0 0 0;
+    rotate: 25deg;
+    position: absolute;
+    left: -3vw;
+    filter: drop-shadow(2vw 1vw 1vw #222);
+}
+
+#levelek2_png{
+    width: 20vw;
+    margin: 1vw 0;
+    position: absolute;
+    filter: drop-shadow(2vw 1vw 1vw #222222);
+}
+
+/*
 #kenguru_png{
     width: 30vw;
     height: 20vw;
     margin: 2vw 0;
 }
+*/
 
-/*A jegyek szekció formázásai*/
-
-#adatok_div {
-    background-color: #2b542e;
-    color: white;
-    margin: 0;
+/*A nyitvatartás szekció formázásai*/
+#nyitvatartas_div {
+    height: 80vh;
+    background-image: url("img/freepik__upload__95862.jpeg");
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: -1;
+    box-shadow: 0 0 2vw black;
 }
 
-#copyright {
+/*
+#nyitvatartas_cim{
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    color: black;
+    font-size: 3vw;
+    margin-top: 3vw;
+    position: absolute;
+    left: 36.5vw;
     text-align: center;
-    font-size: 0.8em;
+    text-shadow: 2vw 2vw 2vw black;
+}
+*/
+
+#nyitvatartas_alcim {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #7db614;
+    font-size: 10vw;
+    margin: 1vw 0;
+    padding: 0;
+    position: absolute;
+    left: 15vw;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#nyitvatartas_kartyak_div {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+#nyitvatartas_kartya1 {
+    width: 30vw;
+    height: 23vw;
+    margin: 15vw 3vw;
+    border-top-left-radius: 3vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+    box-shadow: 0 0 1vw black;
+    background-color: rgba(245, 245, 245, 0.600);
+}
+
+#nyitvatartas_kartya1 h4{
+    margin: 2vw 2vw 0 2vw;
+    font-size: 1.5vw;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+}
+
+#nyitvatartas_kartya1 p{
+    margin: 1vw 2vw 0 2vw;
+    font-size: 3vw;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(0, 0, 0);
+}
+
+#nyitvatartas_kartya2 {
+    width: 30vw;
+    height: 23vw;
+    margin: 15vw 3vw;
+    border-top-left-radius: 3vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
+    box-shadow: 0 0 1vw black;
+    background-color: #7db614b0;
+}
+
+#nyitvatartas_kartya2 p {
+    margin: 0;
+    padding: 2vw;
+    font-size: 1.5vw;
+    line-height: 1.7vw;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: rgb(255, 255, 255);
+}
+
+#baba_orangutan_png {
+    width: 23vw;
+    margin: 38vw 0 0 0;
+    position: absolute;
+    left: 75.72vw;
+    filter: drop-shadow(2vw 1vw 1vw #222);
+}
+
+/*A jegyek szekció formázásai*/
+#jegyarak_div {
+    height: 80vh;
+    background-image: url("img/green-watercolor-texture-recycled-paper-flipped.jpg");
+    background-size: cover;
+    background-repeat: repeat;
+    z-index: -2;
 }
