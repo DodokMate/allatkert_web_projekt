@@ -38,7 +38,7 @@ body {
     transform: scale(1.1);
 }
 
-#jegy_img{
+#jegy_img {
     width: 4vw;
     position: absolute;
     top: 1.2vw;
@@ -137,7 +137,7 @@ mark {
     background-color: #7db614;
 }
 
-#fejlec_jegy_gomb {
+#fejlec_terkep_gomb {
     width: 7vw;
     height: 3vw;
     position: absolute;
@@ -153,7 +153,7 @@ mark {
     box-shadow: 0vw 0vw 1vw rgb(0, 0, 0);
 }
 
-#fejlec_jegy_gomb:hover {
+#fejlec_terkep_gomb:hover {
     background-color: #7db614;
     color: white;
     border: 0.5vw solid #7db614;
@@ -222,15 +222,6 @@ mark {
     z-index: -1;
 }
 
-/*
-#madar_png{
-    width: 30vw;
-    margin-top: 2vw;
-    position: absolute;
-    left: 68.72vw;
-}
-*/
-
 #levelek_png {
     width: 20vw;
     position: absolute;
@@ -294,20 +285,12 @@ mark {
     filter: drop-shadow(2vw 1vw 1vw #222);
 }
 
-#levelek2_png{
+#levelek2_png {
     width: 20vw;
     margin: 1vw 0;
     position: absolute;
     filter: drop-shadow(2vw 1vw 1vw #222222);
 }
-
-/*
-#kenguru_png{
-    width: 30vw;
-    height: 20vw;
-    margin: 2vw 0;
-}
-*/
 
 /*A nyitvatartás szekció formázásai*/
 #nyitvatartas_div {
@@ -318,22 +301,6 @@ mark {
     z-index: -1;
     box-shadow: 0 0 2vw black;
 }
-
-/*
-#nyitvatartas_cim{
-    font-family: "Oswald", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    color: black;
-    font-size: 3vw;
-    margin-top: 3vw;
-    position: absolute;
-    left: 36.5vw;
-    text-align: center;
-    text-shadow: 2vw 2vw 2vw black;
-}
-*/
 
 #nyitvatartas_alcim {
     font-family: "Rubik Doodle Shadow", system-ui;
@@ -367,7 +334,7 @@ mark {
     background-color: rgba(245, 245, 245, 0.600);
 }
 
-#nyitvatartas_kartya1 h4{
+#nyitvatartas_kartya1 h4 {
     margin: 2vw 2vw 0 2vw;
     font-size: 1.5vw;
     font-family: "Oswald", sans-serif;
@@ -377,7 +344,7 @@ mark {
     color: rgb(0, 0, 0);
 }
 
-#nyitvatartas_kartya1 p{
+#nyitvatartas_kartya1 p {
     margin: 1vw 2vw 0 2vw;
     font-size: 3vw;
     font-family: "Oswald", sans-serif;
@@ -421,9 +388,396 @@ mark {
 
 /*A jegyek szekció formázásai*/
 #jegyarak_div {
-    height: 80vh;
+    height: 120vh;
     background-image: url("img/green-watercolor-texture-recycled-paper-flipped.jpg");
     background-size: cover;
     background-repeat: repeat;
     z-index: -2;
+}
+
+#jegyarak_alcim {
+    font-family: "Rubik Doodle Shadow", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffbd59;
+    font-size: 10vw;
+    margin: 1vw 0;
+    padding: 0;
+    position: absolute;
+    left: 24vw;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+#arak_div1 {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 15vw 20vw 0vw 20vw;
+    border: solid red;
+}
+
+#arak_div2 {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0vw 20vw 5vw 20vw;
+    border: solid red;
+}
+
+.ar_div {
+    width: 30vw;
+    height: 20vw;
+    margin: 0.5vw 1vw;
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    box-shadow: 0 0 1vw black;
+    background-color: white;
+}
+
+/*Mobilnézet*/
+@media only screen and (max-width: 720px) {
+    #fejlec_div {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 65.5vh;
+        color: white;
+        box-shadow: 0 1vw 2vw black;
+    }
+
+    #logo {
+        width: 45vw;
+        position: absolute;
+        top: -9vw;
+        left: -4vw;
+        z-index: 1;
+    }
+
+    #kosar_img {
+        width: 10vw;
+        position: fixed;
+        top: 119vw;
+        left: 85vw;
+        padding: 0 0 0 1vw;
+    }
+
+    #jegy_img {
+        width: 10vw;
+        position: fixed;
+        top: 130vw;
+        left: 85vw;
+        padding: 0 0 0 1vw;
+    }
+
+    #arnyek_div {
+        height: 65.5vh;
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.500), rgba(0, 0, 0, 0.500));
+    }
+
+    #menu_div {
+        background-color: #7db614ae;
+        width: 100%;
+        margin: 0;
+        padding: 5vw 0 0.5vw 0;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin-top: -1vw;
+        margin-left: 25vw;
+    }
+
+    #fooldal_link,
+    .linkek {
+        color: white;
+        padding: 1vw;
+        text-decoration: none;
+        font-size: 3vw;
+        font-weight: bold;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        transition: 1s;
+    }
+
+    #fooldal_link:hover,
+    .linkek:hover {
+        color: #ffbd59;
+        text-decoration: underline;
+    }
+
+    #focim_div {
+        width: 35vw;
+        height: 18vw;
+        margin-top: 15vw;
+        margin-left: 6.5vw;
+        font-size: 10vw;
+    }
+
+    #focim {
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin-top: -1vw;
+    }
+
+    #focim1 {
+        margin-top: -19vw;
+        margin-left: 10vw;
+        font-family: "Rubik Doodle Shadow", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffbd59;
+    }
+
+    #fejlec_szoveg_div {
+        width: 75vw;
+        margin-top: 25vw;
+        margin-left: 7vw;
+        font-size: 4.5vw;
+        padding: 0.5vw;
+        line-height: 7vw;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    #fejlec_terkep_gomb {
+        width: 21vw;
+        height: 9vw;
+        background-color: #ffbd59;
+        color: white;
+        border: 1vw solid #ffbd59;
+        border-radius: 1vw;
+        font-family: "Oswald", sans-serif;
+        letter-spacing: 0.1vw;
+        font-size: 4vw;
+        font-weight: bold;
+        box-shadow: 0vw 0vw 1vw rgb(0, 0, 0);
+    }
+
+    #felfele_nyil_ikon {
+        display: none;
+    }
+
+    #bemutatkozas_div {
+        margin-top: 0;
+        height: 130vh;
+        background-image: url("img/green-watercolor-texture-recycled-paper.jpg");
+        background-size: cover;
+        background-repeat: repeat;
+        z-index: -1;
+    }
+
+    #bemutatkozas_cim {
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bold;
+        font-style: normal;
+        color: white;
+        font-size: 5vw;
+        margin-top: 7.5vw;
+        position: absolute;
+        left: 21.5vw;
+        text-align: center;
+        text-shadow: 2vw 2vw 2vw black;
+    }
+
+    #bemutatkozas_alcim {
+        font-family: "Rubik Doodle Shadow", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffbd59;
+        font-size: 17vw;
+        margin: 1vw 0;
+        padding: 0;
+        position: absolute;
+        left: 10vw;
+        opacity: 0.7;
+        z-index: -1;
+    }
+    
+    #bemutatkozas_alcim1 {
+        font-family: "Rubik Doodle Shadow", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffbd59;
+        font-size: 17vw;
+        margin: 15vw 0;
+        padding: 0;
+        position: absolute;
+        left: 50vw;
+        opacity: 0.7;
+        z-index: -1;
+    }
+
+    #levelek_png {
+        width: 20vw;
+        position: absolute;
+        left: 80vw;
+        filter: drop-shadow(2vw 1vw 1vw #222);
+    }
+    
+    #kameleon_png {
+        width: 39vw;
+        margin-top: -2.5vw;
+        position: absolute;
+        left: 61vw;
+        filter: drop-shadow(2vw 1vw 1vw #222);
+    }
+    
+    #bemutatkozo_kartyak_div {
+        display: grid;
+        justify-content: center;
+        margin-top: 35vw;
+        padding: 0;
+    }
+    
+    .kartya_div {
+        width: 50vw;
+        height: 70vw;
+        margin: 3vw 0vw;
+        border-top-left-radius: 2.5vw;
+        border-top-right-radius: 2.5vw;
+        border-bottom-left-radius: 2.5vw;
+        border-bottom-right-radius: 2.5vw;
+        box-shadow: 0 0 1vw black;
+        background-color: white;
+    }
+
+    .kartya_div p {
+        font-size: 4vw;
+        padding: 0vw 5vw;
+        line-height: 4.5vw;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: rgb(85, 85, 85);
+    }
+    
+    .bemutatkozo_kepek {
+        width: 50vw;
+        height: 35vw;
+        margin: 0;
+        border-top-left-radius: 2.5vw;
+        border-top-right-radius: 1vw;
+        box-shadow: 0 0 1vw black;
+    }
+
+    #koala_png {
+        width: 30vw;
+        margin: -25vw 0 0 0;
+        rotate: 25deg;
+        position: absolute;
+        left: -3vw;
+        filter: drop-shadow(2vw 1vw 1vw #222);
+    }
+    
+    #levelek2_png {
+        width: 25vw;
+        margin: 5vw 0;
+        position: absolute;
+        filter: drop-shadow(2vw 1vw 1vw #222222);
+    }
+
+    #nyitvatartas_div {
+        height: 50vh;
+        background-image: url("img/freepik__upload__95862.jpeg");
+        background-size: cover;
+        background-repeat: repeat;
+        z-index: -1;
+        box-shadow: 0 0 2vw black;
+    }
+    
+    #nyitvatartas_alcim {
+        font-family: "Rubik Doodle Shadow", system-ui;
+        font-weight: 400;
+        font-style: normal;
+        color: #7db614;
+        font-size: 11vw;
+        margin: 1vw 0;
+        padding: 0;
+        position: absolute;
+        left: 12vw;
+        opacity: 0.7;
+        z-index: -1;
+    }
+    
+    #nyitvatartas_kartyak_div {
+        display: grid;
+        justify-content: center;
+        padding: 0;
+    }
+    
+    #nyitvatartas_kartya1 {
+        width: 50vw;
+        height: 35vw;
+        margin: 20vw 3vw 0 3vw;
+        border-top-left-radius: 3vw;
+        border-top-right-radius: 3vw;
+        border-bottom-left-radius: 3vw;
+        border-bottom-right-radius: 3vw;
+        box-shadow: 0 0 1vw black;
+        background-color: rgba(245, 245, 245, 0.600);
+    }
+    
+    #nyitvatartas_kartya1 h4 {
+        margin: 2vw 2vw 0 2vw;
+        font-size: 3vw;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: rgb(0, 0, 0);
+    }
+    
+    #nyitvatartas_kartya1 p {
+        margin: 1vw 2vw 0 2vw;
+        font-size: 5.5vw;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: rgb(0, 0, 0);
+    }
+    
+    #nyitvatartas_kartya2 {
+        width: 50vw;
+        height: 35vw;
+        margin: 5vw 3vw;
+        border-top-left-radius: 3vw;
+        border-top-right-radius: 3vw;
+        border-bottom-left-radius: 3vw;
+        border-bottom-right-radius: 3vw;
+        box-shadow: 0 0 1vw black;
+        background-color: #7db614b0;
+    }
+    
+    #nyitvatartas_kartya2 p {
+        margin: 0;
+        padding: 3vw;
+        font-size: 2.5vw;
+        line-height: 2.7vw;
+        font-family: "Oswald", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        color: rgb(255, 255, 255);
+    }
+    
+    #baba_orangutan_png {
+        width: 30vw;
+        margin: 95vw 0 0 0;
+        position: absolute;
+        left: 70vw;
+        filter: drop-shadow(2vw 1vw 1vw #222);
+    }
 }
