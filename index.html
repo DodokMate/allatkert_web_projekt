@@ -33,6 +33,7 @@
 <body>
     <!--Fejléc div-->
     <div class="container">
+        <a href="#fejlec_div"><img src="img/felfele_nyil.png" alt="" id="felfele_nyil_ikon"></a>
         <div id="fejlec_div">
 
             <img src="img/ZOO.png" alt="" id="logo">
@@ -40,43 +41,53 @@
             <img src="img/jegy.png" alt="" id="jegy_img">
 
             <div id="arnyek_div">
+                <div id="also_arnyek_div">
 
-                <div id="menu_div">
-                    <ul id="menu">
-                        <li><a id="fooldal_link" href="fooldal">Főoldal</a></li>
-                        <li><a class="linkek" href="nyitvatartas">Nyitvatartás</a></li>
-                        <li><a class="linkek" href="jegyarak">Jegyárak</a></li>
-                        <li><a class="linkek" href="zoo">Állatkert</a></li>
-                        <li><a class="linkek" href="kapcsolat">Kapcsolat</a></li>
-                    </ul>
+                    <div id="menu_div">
+                        <ul id="menu">
+                            <li><a id="fooldal_link" href="#fejlec_div">Főoldal</a></li>
+                            <li><a class="linkek" href="#nyitvatartas_div">Nyitvatartás</a></li>
+                            <li><a class="linkek" href="#jegyarak_div">Jegyárak</a></li>
+                            <li><a class="linkek" href="#kapcsolat_div">Kapcsolat</a></li>
+                            <li><a class="linkek" href="#bemutatkozas_div">Állatkert</a></li>
+                            <li><a class="linkek" href="#webshop" id="webshop_link">Webshop</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="focim_div">
+                        <h1 id="focim">Budapest</h1>
+                        <h1 id="focim1">ZOO</h1>
+                    </div>
+
+                    <div id="informacio_div">
+                        <div class="informacio_sav informacio_zold">Állatok</div>
+                        <div class="informacio_sav informacio_zold">Programok</div>
+                        <div class="informacio_sav informacio_zold">Galéria</div>
+                    </div>
+
+                    <div id="fejlec_szoveg_div">
+                        <p>
+                            Szeretettel várjuk kedves látogatóinkat, akik <mark> több mint 1000 </mark> állatfajt
+                            fedezhetnek fel egy <mark> nagyszerű élmény </mark> keretén belül!
+                        </p>
+                    </div>
+
+                    <button id="fejlec_terkep_gomb">Térkép</button>
+
                 </div>
-
-                <div id="focim_div">
-                    <h1 id="focim">Budapest</h1>
-                    <h1 id="focim1">ZOO</h1>
-                </div>
-
-                <div id="fejlec_szoveg_div">
-                    <p>
-                        Szeretettel várjuk kedves látogatóinkat, akik <mark> több mint 1000 </mark> állatfajt
-                        fedezhetnek fel egy <mark> nagyszerű élmény </mark> keretén belül!
-                    </p>
-                </div>
-
-                <button id="fejlec_terkep_gomb">Térkép</button>
-
-                <a href="#fejlec_div"><img src="img/felfele_nyil.png" alt="" id="felfele_nyil_ikon"></a>
             </div>
+        </div>
+
+        <div class="elvalaszto_div">
+            <img src="img/szakitott_papir.png" alt="">
         </div>
 
         <!--Bemutatkozó div-->
         <div id="bemutatkozas_div">
+
             <h3 id="bemutatkozas_cim">Járd körbe <br> a kertet és deríts fel minden <br> érdekességet!</h3>
             <h2 id="bemutatkozas_alcim">Fedezd</h2>
             <h2 id="bemutatkozas_alcim1">Fel!</h2>
-
-            <img src="img/levelek.png" alt="" id="levelek_png">
-            <img src="img/kameleon.png" alt="" id="kameleon_png">
 
             <div id="bemutatkozo_kartyak_div">
                 <div class="kartya_div">
@@ -91,7 +102,7 @@
                     <img src="img/alagut_kartya.jpeg" class="bemutatkozo_kepek" alt="">
                     <p>
                         <strong>Merülj alá!</strong> <br> <br>
-                        A víz alatti alagútban találkozhatnak a látogatók a különböző halakkal, rájákkal és cápákkal is!
+                        A víz alatti alagútban a látogatók találkozhatnak a különböző vízalatti élőlényekkel.
                     </p>
                 </div>
 
@@ -107,8 +118,8 @@
 
         <!--Nyitvatartás div-->
         <div id="nyitvatartas_div">
-            <img src="img/koala.png" alt="" id="koala_png">
-            <img src="img/levelek2.png" alt="" id="levelek2_png">
+            <!--img src="img/koala.png" alt="" id="koala_png">
+            <img src="img/levelek2.png" alt="" id="levelek2_png"-->
 
             <!--h3 id="nyitvatartas_cim">Tervezz előre és <br> látogass el a legjobb <br> időpontban!</h3-->
             <h2 id="nyitvatartas_alcim">Nyitvatartás</h2>
@@ -145,37 +156,82 @@
                     </p>
                 </div>
 
-                <img src="img/baba_orangutan.png" alt="" id="baba_orangutan_png">
+                <!--img src="img/baba_orangutan.png" alt="" id="baba_orangutan_png"-->
             </div>
         </div>
 
         <!--Jegyárak div-->
         <div id="jegyarak_div">
-            <h2 id="jegyarak_alcim">Jegyárak</h2>
+            <div id="fade_div">
+                <h2 id="jegyarak_alcim">Jegyárak</h2>
 
-            <div id="arak_div1">
-                <div class="ar_div">
-                    <h4>Felnőtt</h4>
-                    <p>3500 Ft</p>
-                </div>
+                <p id="leiras_p">*Minden jegyet csak érvényes személyi igazolvánnyal lehet igénybe venni.</p>
 
-                <div class="ar_div">
-                    <h4>Diák</h4>
-                    <p>2500 Ft</p>
+                <div id="arak_div">
+                    <div class="ar_div">
+                        <button class="kosarba_gomb_jegy">+ Kosárba</button>
+                        <div class="jegyarak_cim_div">
+                            <h4>Felnőtt</h4>
+                        </div>
+                        <p class="ar_p">3.500 Ft</p>
+                        <p class="kor_p">18 éves kortól</p>
+                    </div>
+
+                    <div class="ar_div">
+                        <button class="kosarba_gomb_jegy">+ Kosárba</button>
+                        <div class="jegyarak_cim_div">
+                            <h4>Diák</h4>
+                        </div>
+                        <p class="ar_p">2.500 Ft</p>
+                        <p class="arak_leiras">Érvényes diákigazolvány felmutatása szükséges a pénztárnál</p>
+                    </div>
+
+                    <div class="ar_div">
+                        <button class="kosarba_gomb_jegy">+ Kosárba</button>
+                        <div class="jegyarak_cim_div">
+                            <h4>Nyugdíjas</h4>
+                        </div>
+                        <p class="ar_p">2.500 Ft</p>
+                        <p class="kor_p">60 éves kortól</p>
+                    </div>
+
+                    <div class="ar_div">
+                        <button class="kosarba_gomb_jegy">+ Kosárba</button>
+                        <div class="jegyarak_cim_div">
+                            <h4>Családi jegy</h4>
+                        </div>
+                        <p class="ar_p">10.000 Ft</p>
+                        <p class="arak_leiras">4 személy felett minden személy után +2000 Ft felárat kell fizetni</p>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div id="arak_div2">
-                <div class="ar_div">
-                    <h4>Nyugdíjas</h4>
-                    <p>2500 Ft</p>
-                </div>
+        <div id="webshop"></div>
+        <!--Webshop div-->
+        <div id="webshop_div" style="display: none;">
+            <h2 id="webshop_cim">Állatkerti Ajándékbolt</h2>
+            <div id="termekek_div"></div>
+        </div>
 
-                <div class="ar_div">
-                    <h4>Családi jegy</h4>
-                    <p>10000 Ft</p>
-                </div>
-            </div>
+        <!--Kapcsolat div-->
+        <div id="kapcsolat_div">
+            <div id="fade2_div"></div>
+            <h3>Kapcsolat</h3>
+            <p>1146 Budapest, <br> Állatkerti krt. 6-12.</p>
+            <p>info@zoobudapest.com</p>
+            <p>+36-1 273-4900</p>
+            <p>+36-1 273-4901</p>
+        </div>
+    </div>
+
+    <!--Kosár div-->
+    <div id="kosar_panel">
+        <div id="kosar_tartalom">
+            <h2>Kosarad</h2>
+            <ul id="kosar_lista"></ul>
+            <p id="ures_kosar_szoveg">A kosarad üres.</p>
+            <button id="kosar_bezar">Bezárás</button>
         </div>
     </div>
 </body>
