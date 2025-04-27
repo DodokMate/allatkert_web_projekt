@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         ujTermek.innerHTML = `${termekNev} - ${termekAr} Ft <button class="torles_gomb">Törlés</button>`;
 
- 
+
         ujTermek.querySelector(".torles_gomb").addEventListener("click", function () {
             kosarLista.removeChild(ujTermek);
             ellenorizKosarat();
@@ -71,5 +71,81 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     ellenorizKosarat();
+
+
+    //Webshop szekcio
+    const webshopLink = document.getElementById('webshop_link');
+    const webshopDiv = document.getElementById('webshop_div');
+    const termekekDiv = document.getElementById('termekek_div');
+
+   
+    const bemutatkozasDiv = document.getElementById('bemutatkozas_div');
+    const nyitvatartasDiv = document.getElementById('nyitvatartas_div');
+    const jegyarakDiv = document.getElementById('jegyarak_div');
+
+    webshopLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        bemutatkozasDiv.style.display = 'none';
+        nyitvatartasDiv.style.display = 'none';
+        jegyarakDiv.style.display = 'none';
+        webshopDiv.style.display = 'block';
+        kosarPanel.classList.remove('megnyitva'); 
+        betoltCSV();
+        webshopDiv.scrollIntoView({ behavior: 'smooth' });
+
+    });
+
+    function betoltCSV() {
+        fetch('products.csv')
+            .then(response => response.text())
+            .then(text => {
+                const sorok = text.trim().split('\n');
+                termekekDiv.innerHTML = ''; 
+                sorok.forEach(sor => {
+                    const [nev, ar, kep] = sor.split(',');
+                    const kartya = document.createElement('div');
+                    kartya.classList.add('termek_kartya');
+                    kartya.innerHTML = `
+                    <img src="${kep.trim()}" alt="${nev.trim()}" class="termek_kep">
+                    <h3>${nev.trim()}</h3>
+                    <p>${ar.trim()} Ft</p>
+                    <button class="kosarba_gomb">Kosárba</button>`;
+
+                    kartya.querySelector('.kosarba_gomb').addEventListener('click', function () {
+                        termekHozzaadas(nev.trim(), ar.trim());
+                    });
+
+                    termekekDiv.appendChild(kartya);
+                });
+            })
+            .catch(error => console.error('Hiba a CSV betöltésekor:', error));
+    }
+
+
+
+    
+    const menuLinkek = document.querySelectorAll('#menu a');
+
+    
+    menuLinkek.forEach(link => {
+        if (link !== webshopLink) { 
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                fejlecDiv.style.display = 'block';
+                bemutatkozasDiv.style.display = 'block';
+                nyitvatartasDiv.style.display = 'block';
+                jegyarakDiv.style.display = 'block';
+                webshopDiv.style.display = 'none';
+
+                const celId = this.getAttribute('href');
+                const celElem = document.querySelector(celId);
+                if (celElem) {
+                    celElem.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+    });
+
 });
 
