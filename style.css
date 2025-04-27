@@ -1022,7 +1022,7 @@ strong {
     font-style: italic;
 }
 
-#kosar_bezar {
+#kosar_bezar, #vasarlas_gomb {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #7db614;
@@ -1035,7 +1035,7 @@ strong {
     width: 100%;
 }
 
-#kosar_bezar:hover {
+#kosar_bezar:hover, #vasarlas_gomb:hover {
     background-color: #5a870f;
 }
 
@@ -1132,6 +1132,87 @@ strong {
     }
 
     .kosarba_gomb {
+        font-size: 5vw;
+    }
+}
+
+
+
+
+/*vasarlas oldal*/
+#vasarlas_oldal {
+    background-color: #f5fff5;
+    padding: 4vw;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+#vasarlas_cim {
+    font-family: "Oswald", sans-serif;
+    font-size: 4vw;
+    color: #7db614;
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+#vasarlas_kosar_tartalom {
+    margin: 2vw auto;
+    width: 80%;
+    background: white;
+    padding: 2vw;
+    border-radius: 1vw;
+    box-shadow: 0 0 1vw rgba(0,0,0,0.1);
+}
+
+#vasarlas_kosar_tartalom p {
+    font-size: 1.5vw;
+    margin: 1vw 0;
+}
+
+#vegosszeg_szoveg {
+    text-align: center;
+    color: #7db614;
+    font-size: 2vw;
+    margin-top: 2vw;
+}
+
+#vasarlo_form {
+    margin-top: 3vw;
+    text-align: center;
+}
+
+#vasarlo_form input {
+    display: block;
+    width: 60%;
+    margin: 1vw auto;
+    padding: 1vw;
+    font-size: 1.5vw;
+    border: 1px solid #ccc;
+    border-radius: 0.5vw;
+}
+
+#vasarlo_form button {
+    margin-top: 2vw;
+    padding: 1vw 2vw;
+    font-size: 1.5vw;
+    background-color: #7db614;
+    border: none;
+    color: white;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+#vasarlo_form button:hover {
+    background-color: #5a870f;
+}
+
+/*vasarlasoldal mobiln*/
+@media only screen and (max-width: 720px) {
+    #vasarlas_kosar_tartalom {
+        width: 95%;
+    }
+    
+    #vasarlas_kosar_tartalom p, #vegosszeg_szoveg, #vasarlo_form input, #vasarlo_form button {
         font-size: 5vw;
     }
 }

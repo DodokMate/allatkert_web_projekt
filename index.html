@@ -210,9 +210,24 @@
         <div id="webshop"></div>
         <!--Webshop div-->
         <div id="webshop_div" style="display: none;">
-            <h2 id="webshop_cim">Állatkerti Ajándékbolt</h2>
-            <div id="termekek_div"></div>
+            
         </div>
+
+        <!-- Állatok div -->
+        <div id="allatok_div" style="display: none;">
+            
+        </div>
+
+        <!-- Programok div -->
+        <div id="programok_div" style="display: none;">
+            
+        </div>
+
+        <!-- Galéria div -->
+        <div id="galeria_div" style="display: none;">
+            
+        </div>
+
 
         <!--Kapcsolat div-->
         <div id="kapcsolat_div">
@@ -232,8 +247,39 @@
             <ul id="kosar_lista"></ul>
             <p id="ures_kosar_szoveg">A kosarad üres.</p>
             <button id="kosar_bezar">Bezárás</button>
+            <button id="vasarlas_gomb">Vásárlás</button>
         </div>
     </div>
+
+    <div id="vasarlas_oldal" style="display: none;">
+        <h2 id="vasarlas_cim">Vásárlás</h2>
+        <div id="vasarlas_kosar_tartalom"></div>
+        <h3 id="vegosszeg_szoveg"></h3>
+
+        <form id="vasarlo_form">
+            <input type="text" id="vasarlo_nev" placeholder="Teljes név" required>
+            <input type="email" id="vasarlo_email" placeholder="Email cím" required>
+            <input type="text" id="vasarlo_cim" placeholder="Szállítási cím" required>
+
+            <!-- Fizetési mód choice-->
+            <label>Fizetési mód:</label><br>
+            <input type="radio" id="fizetes_mod_utanvet" name="fizetes_mod" value="utanvet" checked>
+            <label for="fizetes_mod_utanvet">Utánvét</label><br>
+            <input type="radio" id="fizetes_mod_online" name="fizetes_mod" value="online">
+            <label for="fizetes_mod_online">Online fizetés</label><br>
+
+            <!-- Online fizetés div-->
+            <div id="bankkartya_div" style="display: none;">
+                <input type="text" id="bankkartya_szam" placeholder="Bankkártya szám" maxlength="16">
+                <input type="text" id="bankkartya_honap" placeholder="Lejárat hónap" maxlength="2">
+                <input type="text" id="bankkartya_ev" placeholder="Lejárat év" maxlength="2">
+                <input type="text" id="bankkartya_cvc" placeholder="CVC kód" maxlength="3">
+            </div>
+
+            <button type="submit">Vásárlás véglegesítése</button>
+        </form>
+    </div>
+
 </body>
 
 </html>

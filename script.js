@@ -83,9 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     webshopLink.addEventListener('click', function (e) {
         e.preventDefault();
-        bemutatkozasDiv.style.display = 'none';
-        nyitvatartasDiv.style.display = 'none';
-        jegyarakDiv.style.display = 'none';
+        mindenDivElrejt();
         webshopDiv.style.display = 'block';
         kosarPanel.classList.remove('megnyitva');
         betoltCSV();
@@ -104,10 +102,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     const kartya = document.createElement('div');
                     kartya.classList.add('termek_kartya');
                     kartya.innerHTML = `
-                     <img src="${kep.trim()}" alt="${nev.trim()}" class="termek_kep">
-                     <h3>${nev.trim()}</h3>
-                     <p>${ar.trim()} Ft</p>
-                     <button class="kosarba_gomb">Kosárba</button>`;
+                    <img src="${kep.trim()}" alt="${nev.trim()}" class="termek_kep">
+                    <h3>${nev.trim()}</h3>
+                    <p>${ar.trim()} Ft</p>
+                    <button class="kosarba_gomb">Kosárba</button>`;
 
                     kartya.querySelector('.kosarba_gomb').addEventListener('click', function () {
                         termekHozzaadas(nev.trim(), ar.trim());
@@ -130,7 +128,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 bemutatkozasDiv.style.display = 'block';
                 nyitvatartasDiv.style.display = 'block';
                 jegyarakDiv.style.display = 'block';
+                kapcsolatDiv.style.display = 'block';
                 webshopDiv.style.display = 'none';
+                
 
                 const celId = this.getAttribute('href');
                 const celElem = document.querySelector(celId);
@@ -140,4 +140,127 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
+
+
+    //Információ gombok
+    const informacioSavok = document.querySelectorAll('.informacio_sav');
+    const allatokDiv = document.getElementById('allatok_div');
+    const programokDiv = document.getElementById('programok_div');
+    const galeriaDiv = document.getElementById('galeria_div');
+    const kapcsolatDiv = document.getElementById('kapcsolat_div');
+
+    function mindenDivElrejt() {
+        bemutatkozasDiv.style.display = 'none';
+        nyitvatartasDiv.style.display = 'none';
+        jegyarakDiv.style.display = 'none';
+        webshopDiv.style.display = 'none';
+        allatokDiv.style.display = 'none';
+        programokDiv.style.display = 'none';
+        galeriaDiv.style.display = 'none';
+        kapcsolatDiv.style.display = 'none';
+        kosarPanel.classList.remove('megnyitva');
+    }
+
+    informacioSavok[0].addEventListener('click', function () {
+        mindenDivElrejt();
+        allatokDiv.style.display = 'block';
+        allatokDiv.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    informacioSavok[1].addEventListener('click', function () {
+        mindenDivElrejt();
+        programokDiv.style.display = 'block';
+        programokDiv.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    informacioSavok[2].addEventListener('click', function () {
+        mindenDivElrejt();
+        galeriaDiv.style.display = 'block';
+        galeriaDiv.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    //Jegyek kosárba rakása
+    const jegyKosarbaGombok = document.querySelectorAll('.kosarba_gomb_jegy');
+
+    jegyKosarbaGombok.forEach(gomb => {
+        gomb.addEventListener('click', function () {
+            const kartya = gomb.parentElement;
+            const nev = kartya.querySelector('h4').innerText.trim();
+            const ar = kartya.querySelector('.ar_p').innerText.trim().replace(' Ft', '').replace('.', '');
+            termekHozzaadas(nev, ar);
+        });
+    });
+
+
+
+    const vasarlasGomb = document.getElementById('vasarlas_gomb');
+    const vasarlasOldal = document.getElementById('vasarlas_oldal');
+    const vasarlasKosarTartalom = document.getElementById('vasarlas_kosar_tartalom');
+    const vegosszegSzoveg = document.getElementById('vegosszeg_szoveg');
+    const vasarloForm = document.getElementById('vasarlo_form');
+
+    vasarlasGomb.addEventListener('click', function () {
+        kosarPanel.classList.remove('megnyitva');
+        mindenDivElrejt();
+        fejlecDiv.style.display = 'none';
+        vasarlasOldal.style.display = 'block';
+        megjelenitVasarlasKosarat();
+    });
+
+    function megjelenitVasarlasKosarat() {
+        const kosarTetelek = kosarLista.querySelectorAll('li');
+        vasarlasKosarTartalom.innerHTML = '';
+        let osszeg = 0;
+
+        kosarTetelek.forEach(elem => {
+            const szoveg = elem.textContent.replace('Törlés', '').trim();
+            const darabolt = szoveg.split(' - ');
+            const ar = parseInt(darabolt[1].replace('Ft', '').trim());
+            osszeg += ar;
+
+            const p = document.createElement('p');
+            p.textContent = szoveg;
+            vasarlasKosarTartalom.appendChild(p);
+        });
+
+        vegosszegSzoveg.textContent = `Végösszeg: ${osszeg} Ft`;
+    }
+    const fizetesModUtanszav = document.getElementById('fizetes_mod_utanvet');
+    const fizetesModOnline = document.getElementById('fizetes_mod_online');
+    const bankkartyaDiv = document.getElementById('bankkartya_div');
+
+    
+    fizetesModUtanszav.addEventListener('change', function () {
+        bankkartyaDiv.style.display = 'none';
+    });
+
+    fizetesModOnline.addEventListener('change', function () {
+        bankkartyaDiv.style.display = 'block';
+    });
+
+
+    vasarloForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nev = document.getElementById('vasarlo_nev').value;
+        const email = document.getElementById('vasarlo_email').value;
+        const cim = document.getElementById('vasarlo_cim').value;
+        const fizetesMod = document.querySelector('input[name="fizetes_mod"]:checked').value;
+
+        if (fizetesMod === 'online') {
+            const bankkartyaSzam = document.getElementById('bankkartya_szam').value;
+            const honap = document.getElementById('bankkartya_honap').value;
+            const ev = document.getElementById('bankkartya_ev').value;
+            const cvc = document.getElementById('bankkartya_cvc').value;
+
+            if (!bankkartyaSzam || !honap || !ev || !cvc) {
+                alert('Minden bankkártya adatot meg kell adni!');
+                return;
+            }
+        }
+
+        alert('Köszönjük a vásárlást! 😊');
+    });
+
+
 });
