@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    //BG valtakozas
     const fejlecDiv = document.getElementById("fejlec_div");
     const images = [
         "img/elefant_header.jpg",
@@ -30,4 +32,44 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     setInterval(changeBackground, 5000);
+
+    //Kosar szekcio
+    const kosarImg = document.getElementById("kosar_img");
+    const kosarPanel = document.getElementById("kosar_panel");
+    const kosarBezar = document.getElementById("kosar_bezar");
+    const kosarLista = document.getElementById("kosar_lista");
+    const uresKosarSzoveg = document.getElementById("ures_kosar_szoveg");
+
+    kosarImg.addEventListener("click", function () {
+        kosarPanel.classList.add("megnyitva");
+    });
+
+    kosarBezar.addEventListener("click", function () {
+        kosarPanel.classList.remove("megnyitva");
+    });
+
+    function termekHozzaadas(termekNev, termekAr) {
+        const ujTermek = document.createElement("li");
+
+        ujTermek.innerHTML = `${termekNev} - ${termekAr} Ft <button class="torles_gomb">Törlés</button>`;
+
+ 
+        ujTermek.querySelector(".torles_gomb").addEventListener("click", function () {
+            kosarLista.removeChild(ujTermek);
+            ellenorizKosarat();
+        });
+
+        kosarLista.appendChild(ujTermek);
+        ellenorizKosarat();
+    }
+
+    function ellenorizKosarat() {
+        if (kosarLista.children.length === 0) {
+            uresKosarSzoveg.style.display = "block";
+        } else {
+            uresKosarSzoveg.style.display = "none";
+        }
+    }
+    ellenorizKosarat();
 });
+
