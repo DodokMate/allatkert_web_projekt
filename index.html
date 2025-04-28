@@ -25,6 +25,9 @@
         rel="stylesheet">
     <!------------------>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <title>Budapest - ZOO</title>
@@ -33,7 +36,10 @@
 <body>
     <!--Fejléc div-->
     <div class="container">
-        <a href="#fejlec_div"><img src="img/felfele_nyil.png" alt="" id="felfele_nyil_ikon"></a>
+        <div id="felfele_div">
+            <a href="#fejlec_div"><img src="img/felfele_nyil.png" alt="" id="felfele_nyil_ikon"></a>
+        </div>
+
         <div id="fejlec_div">
 
             <img src="img/ZOO.png" alt="" id="logo">
@@ -46,10 +52,10 @@
                     <div id="menu_div">
                         <ul id="menu">
                             <li><a id="fooldal_link" href="#fejlec_div">Főoldal</a></li>
+                            <li><a class="linkek" href="#bemutatkozas_div">Állatkert</a></li>
                             <li><a class="linkek" href="#nyitvatartas_div">Nyitvatartás</a></li>
                             <li><a class="linkek" href="#jegyarak_div">Jegyárak</a></li>
-                            <li><a class="linkek" href="#kapcsolat_div">Kapcsolat</a></li>
-                            <li><a class="linkek" href="#bemutatkozas_div">Állatkert</a></li>
+                            <li><a class="linkek" href="#programok_div">Programok</a></li>
                             <li><a class="linkek" href="#webshop" id="webshop_link">Webshop</a></li>
                         </ul>
                     </div>
@@ -61,7 +67,7 @@
 
                     <div id="informacio_div">
                         <div class="informacio_sav informacio_zold">Állatok</div>
-                        <div class="informacio_sav informacio_zold">Programok</div>
+                        <div class="informacio_sav informacio_zold">Térkép</div>
                         <div class="informacio_sav informacio_zold">Galéria</div>
                     </div>
 
@@ -72,8 +78,7 @@
                         </p>
                     </div>
 
-                    <button id="fejlec_terkep_gomb">Térkép</button>
-
+                    <a href="#kapcsolat_div" id="kapcsolat_gomb">Kapcsolat</a>
                 </div>
             </div>
         </div>
@@ -114,14 +119,80 @@
                     </p>
                 </div>
             </div>
+
+            <hr>
+
+            <div>
+                <img src="img/allatkert_hatter.jpg" alt="" id="allatkert_img">
+
+                <p id="allatkert_p">
+                    A Budapesti Állatkert és Növénykert 1866-ban nyílt meg, így az egyik legrégebbi állatkert Európában.
+                    Az állatkertben több mint 1000 állatfaj található, a világ minden tájáról. Különösen híres az
+                    elefántházáról, a műemléképületeiről és a szépen gondozott parkjairól. Az állatkert lakói között
+                    megtalálható a zsiráf, a jegesmedve, az orángután és sok más ritkaság is. Az állatkert része a
+                    Pálmaház és a Japánkert is, ahol egzotikus növények között sétálhatunk. A Holnemvolt Vár külön
+                    területként a gyerekeknek készült, tele játékokkal és kisállatokkal. Az intézmény folyamatosan újít
+                    és bővít, például nemrég készült el a Biodóm épülete. A Budapesti Állatkert nemcsak kikapcsolódást,
+                    hanem ismeretterjesztést és természetvédelmet is szolgál. A Budapesti Állatkert az egyik
+                    legkedveltebb családi kirándulóhely a fővárosban. Az állatkert különlegessége, hogy sok állattal
+                    testközelből is találkozhatnak a látogatók. A kisállat simogatóban például kecskéket és nyulakat
+                    lehet megsimogatni. A Nagytó környékén pelikánok és flamingók élnek, színesítve a tájat. Az
+                    Állatkert híres a fókashow-ról is, ahol a fókák trükköket mutatnak be. Az év során több rendezvényt
+                    is tartanak, például éjszakai állatkerti sétákat. A régi elefántház és a Szavanna-ház is igazi
+                    építészeti látványosságnak számít. A Budapesti Állatkert célja, hogy az állatokon keresztül közelebb
+                    hozza az emberekhez a természet csodáit.
+                </p>
+            </div>
+
+            <img src="img/baba_orangutan.png" alt="" id="baba_orangutan_png">
+        </div>
+
+        <div class="elvalaszto_div">
+            <img src="img/szakitott_papir_zold.png" alt="">
+        </div>
+
+        <!--Programok div-->
+        <div id="programok_div">
+
+            <h2 id="programok_cim">Programok</h2>
+
+            <div id="programok_kartyak_div">
+                <div class="programok_kartya_div">
+                    <img src="img/145.jpg" class="programok_kepek" alt="" id="elefant_etetes_img">
+                    <p id="elefant_etetes_p">
+                        <strong>Elefánt etetés és fürdetés</strong> <br> <br>
+                        Gyere és nézd meg, ahogy az elefántjaink csemegéznek és egy frissítő fürdőt vesznek!<br> <br>
+                        Időpont: 2025.04.28. 10:00
+                    </p>
+                </div>
+
+                <div class="programok_kartya_div">
+                    <p id="foka_p">
+                        <strong>Fóka bemutató</strong> <br> <br>
+                        Vess egy pillantást tehetséges fókáinkra ahol garantált a szórakozás!<br> <br>
+                        Időpont: 2025.05.02. 11:00
+                    </p>
+                    <img id="foka_img" src="img/a19c96.jpg" class="programok_kepek" alt="">
+                </div>
+
+                <div class="programok_kartya_div">
+                    <img id="teve_img" src="img/faircamel1.jpg" class="programok_kepek" alt="">
+                    <p id="teve_p">
+                        <strong>Tevegelés</strong> <br> <br>
+                        Próbáld ki milyen egy igazi teve hátán körbejárni a kert egyes részeit!<br> <br>
+                        Időpont: 2025.06.07.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="elvalaszto_div">
+            <img src="img/szakitott_papir.png" alt="">
         </div>
 
         <!--Nyitvatartás div-->
         <div id="nyitvatartas_div">
-            <!--img src="img/koala.png" alt="" id="koala_png">
-            <img src="img/levelek2.png" alt="" id="levelek2_png"-->
-
-            <!--h3 id="nyitvatartas_cim">Tervezz előre és <br> látogass el a legjobb <br> időpontban!</h3-->
             <h2 id="nyitvatartas_alcim">Nyitvatartás</h2>
 
             <div id="nyitvatartas_kartyak_div">
@@ -155,9 +226,9 @@
                         Egyes állatházak csak később, 10:00-kor nyitnak.
                     </p>
                 </div>
-
-                <!--img src="img/baba_orangutan.png" alt="" id="baba_orangutan_png"-->
             </div>
+
+            <img src="img/kenguru.png" alt="" id="kenguru_img">
         </div>
 
         <!--Jegyárak div-->
@@ -211,33 +282,152 @@
         <!--Webshop div-->
         <div id="webshop_div" style="display: none;">
             <h2 id="webshop_cim">Állatkerti Ajándékbolt</h2>
-        <div id="termekek_div"></div>
+            <div id="termekek_div"></div>
         </div>
 
         <!-- Állatok div -->
         <div id="allatok_div" style="display: none;">
-            
+            <h1>Állataink és növényeink</h1>
+
+            <div id="csoportositasok_div">
+                <div id="szf_div">
+                    <h3 id="szf">Szarazföldi állatok királysága</h3>
+                    <p id="szfp"> Az állatkert szárazföldi lakói között megtalálhatjuk az oroszlánt, a zebrákat és a
+                        szurikátákat. Az
+                        oroszlán, a "szavanna királya", lustán heverészik a fák árnyékában. A zebrák csíkos bundája
+                        nemcsak
+                        szép,
+                        hanem a ragadozók megtévesztésére is szolgál. A szurikáták figyelőállásban állnak, mindig éberen
+                        kutatva
+                        a
+                        veszély után. Tudtad, hogy egy szurikátacsoportban mindig van egy "őr", aki jelez a többieknek,
+                        ha
+                        baj
+                        közeleg?
+                    </p>
+                </div>
+
+                <div id="viz_div">
+                    <h3 id="viz">A víz birodalmának lakói</h3>
+                    <p id="vizp"> Az állatkert akváriumaiban delfinek, vízilovak és tengeri teknősök élnek. A delfinek
+                        intelligens játékaikkal
+                        és akrobatikus ugrásaikkal kápráztatják el a látogatókat. A vízilovak napközben a víz alatt
+                        pihennek,
+                        csak
+                        orrukat dugva a felszínre levegőért. A tengeri teknősök lassú mozgása nyugalmat áraszt, miközben
+                        kecsesen
+                        siklanak a vízben. Érdekesség, hogy a tengeri teknősök akár 80-100 évig is élhetnek!</p>
+                </div>
+
+                <div id="madar_div">
+                    <h3 id="madar">A madarak színes világa</h3>
+                    <p id="madarp"> Az állatkert madárházában papagájok, flamingók és sasok élnek. A papagájok
+                        színes tollazatukkal
+                        és
+                        éneklő hangjukkal mindig felkeltik a figyelmet. A flamingók gyönyörű rózsaszín színükkel és
+                        elegáns
+                        járásukkal vonzzák a tekinteteket. A sasok hatalmas szárnyaikkal és éles látásukkal uralják a
+                        levegőt.
+                        Tudtad, hogy a flamingók színét a táplálékukban lévő pigmentek adják?</p>
+                </div>
+
+                <div id="hüllo_div">
+                    <h3 id="ketel">Kétéltűek rejtett világa</h3>
+                    <p id="ketelp"> A békák, a szalamandrák és a gőték képviselik az állatkert kétéltű lakóit. A békák
+                        változatos színeikkel
+                        sokszor elrejtőznek a növények között. A szalamandrák nedves környezetet igényelnek, és ritkán
+                        mutatkoznak
+                        napfényes helyeken. A gőték elegánsan úsznak a kisebb tavak vizében. Külön érdekesség, hogy
+                        egyes
+                        szalamandrafajok képesek visszanöveszteni elvesztett végtagjaikat!</p>
+                </div>
+
+                <div id="noveny_div">
+                    <h3 id="noveny">A növények csodálatos világa</h3>
+                    <p id="novp"> Az állatkert növényzete különleges élőhelyet biztosít az állatok számára. A trópusi
+                        növények,
+                        mint a
+                        banánfák és a pálmák, igazi dzsungelhangulatot teremtenek. A kaktuszok és a pozsgás növények
+                        pedig
+                        a
+                        szárazabb területeket színesítik. Az állatkertben található virágágyásokban pedig szebbnél szebb
+                        virágok
+                        nyílnak, amelyek vonzzák a méheket és pillangókat. Tudtad, hogy egyes kaktuszfajok akár 30 évig
+                        is
+                        virágoznak?
+                    </p>
+                </div>
+            </div>
         </div>
 
-        <!-- Programok div -->
-        <div id="programok_div" style="display: none;">
-            
+        <!-- Térkép div -->
+        <div id="terkep_div" style="display: none;">
+            <h1>Térkép</h1>
+            <img src="img/terkep.jpg" alt="" id="terkep_kep">
         </div>
 
         <!-- Galéria div -->
         <div id="galeria_div" style="display: none;">
-            
+
+            <h1>Kép galéria</h1>
+
+            <div class="swiper sample-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/kek_papagaj_header.jpg"></div>
+                    <div class="swiper-slide"><img src="img/tuzhal_header.jpg"></div>
+                    <div class="swiper-slide"><img src="img/kameleon_header.jpg"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <p>Állataink képeinek feltöltése folyamat alatt van...</p>
         </div>
 
+        <div id="vasarlas_oldal" style="display: none;">
+            <h2 id="vasarlas_cim">Vásárlás</h2>
+            <div id="vasarlas_kosar_tartalom"></div>
+            <h3 id="vegosszeg_szoveg"></h3>
+    
+            <form id="vasarlo_form">
+                <input type="text" id="vasarlo_nev" placeholder="Teljes név" required>
+                <input type="email" id="vasarlo_email" placeholder="Email cím" required>
+                <input type="text" id="vasarlo_cim" placeholder="Szállítási cím" required>
+    
+                <!-- Fizetési mód choice-->
+                <label>Fizetési mód:</label><br>
+                <input type="radio" id="fizetes_mod_utanvet" name="fizetes_mod" value="utanvet" checked>
+                <label for="fizetes_mod_utanvet">Utánvét</label><br>
+                <input type="radio" id="fizetes_mod_online" name="fizetes_mod" value="online">
+                <label for="fizetes_mod_online">Online fizetés</label><br>
+    
+                <!-- Online fizetés div-->
+                <div id="bankkartya_div" style="display: none;">
+                    <input type="text" id="bankkartya_szam" placeholder="Bankkártya szám" maxlength="16">
+                    <input type="text" id="bankkartya_honap" placeholder="Lejárat hónap" maxlength="2">
+                    <input type="text" id="bankkartya_ev" placeholder="Lejárat év" maxlength="2">
+                    <input type="text" id="bankkartya_cvc" placeholder="CVC kód" maxlength="3">
+                </div>
+    
+                <button type="submit">Vásárlás véglegesítése</button>
+            </form>
+        </div>
 
         <!--Kapcsolat div-->
         <div id="kapcsolat_div">
             <div id="fade2_div"></div>
-            <h3>Kapcsolat</h3>
-            <p>1146 Budapest, <br> Állatkerti krt. 6-12.</p>
-            <p>info@zoobudapest.com</p>
-            <p>+36-1 273-4900</p>
-            <p>+36-1 273-4901</p>
+
+            <h3 id="kapcsolat_h3">Kapcsolat</h3>
+            <p id="cim">1146 Budapest, <br> Állatkerti krt. 6-12.</p>
+            <p id="email">info@zoobudapest.com</p>
+            <p id="telszam">+36-1 273-4900 <br> +36-1 273-4901</p>
+
+            <h3 id="kovetes_h3">Kövess be</h3>
+            <a href="https://www.facebook.com/allatkert/"><img id="social_media1" src="img/facebook.png" alt=""></a>
+            <a href="https://www.instagram.com/zoobudapest/"><img id="social_media2" src="img/instagram.png" alt=""></a>
+            <a href="https://www.tiktok.com/@zoobudapest"><img id="social_media3" src="img/tiktok.png" alt=""></a>
+
         </div>
     </div>
 
@@ -251,36 +441,6 @@
             <button id="vasarlas_gomb">Vásárlás</button>
         </div>
     </div>
-
-    <div id="vasarlas_oldal" style="display: none;">
-        <h2 id="vasarlas_cim">Vásárlás</h2>
-        <div id="vasarlas_kosar_tartalom"></div>
-        <h3 id="vegosszeg_szoveg"></h3>
-
-        <form id="vasarlo_form">
-            <input type="text" id="vasarlo_nev" placeholder="Teljes név" required>
-            <input type="email" id="vasarlo_email" placeholder="Email cím" required>
-            <input type="text" id="vasarlo_cim" placeholder="Szállítási cím" required>
-
-            <!-- Fizetési mód choice-->
-            <label>Fizetési mód:</label><br>
-            <input type="radio" id="fizetes_mod_utanvet" name="fizetes_mod" value="utanvet" checked>
-            <label for="fizetes_mod_utanvet">Utánvét</label><br>
-            <input type="radio" id="fizetes_mod_online" name="fizetes_mod" value="online">
-            <label for="fizetes_mod_online">Online fizetés</label><br>
-
-            <!-- Online fizetés div-->
-            <div id="bankkartya_div" style="display: none;">
-                <input type="text" id="bankkartya_szam" placeholder="Bankkártya szám" maxlength="16">
-                <input type="text" id="bankkartya_honap" placeholder="Lejárat hónap" maxlength="2">
-                <input type="text" id="bankkartya_ev" placeholder="Lejárat év" maxlength="2">
-                <input type="text" id="bankkartya_cvc" placeholder="CVC kód" maxlength="3">
-            </div>
-
-            <button type="submit">Vásárlás véglegesítése</button>
-        </form>
-    </div>
-
 </body>
 
 </html>

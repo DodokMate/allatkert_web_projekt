@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const termekekDiv = document.getElementById('termekek_div');
 
     const bemutatkozasDiv = document.getElementById('bemutatkozas_div');
+    const programokDiv = document.getElementById('programok_div');
     const nyitvatartasDiv = document.getElementById('nyitvatartas_div');
     const jegyarakDiv = document.getElementById('jegyarak_div');
 
@@ -126,10 +127,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 fejlecDiv.style.display = 'block';
                 bemutatkozasDiv.style.display = 'block';
+                programokDiv.style.display = 'block';
                 nyitvatartasDiv.style.display = 'block';
                 jegyarakDiv.style.display = 'block';
                 kapcsolatDiv.style.display = 'block';
                 webshopDiv.style.display = 'none';
+                allatokDiv.style.display = 'none';
+                terkepDiv.style.display = 'none';
                 
 
                 const celId = this.getAttribute('href');
@@ -145,19 +149,23 @@ document.addEventListener("DOMContentLoaded", function () {
     //Információ gombok
     const informacioSavok = document.querySelectorAll('.informacio_sav');
     const allatokDiv = document.getElementById('allatok_div');
-    const programokDiv = document.getElementById('programok_div');
+    const terkepDiv = document.getElementById('terkep_div');
     const galeriaDiv = document.getElementById('galeria_div');
     const kapcsolatDiv = document.getElementById('kapcsolat_div');
+    const felfeleDiv = document.getElementById('felfele_div');
+   
 
     function mindenDivElrejt() {
+        felfeleDiv.style.display = 'none';
         bemutatkozasDiv.style.display = 'none';
+        programokDiv.style.display = 'none';
         nyitvatartasDiv.style.display = 'none';
         jegyarakDiv.style.display = 'none';
         webshopDiv.style.display = 'none';
         allatokDiv.style.display = 'none';
-        programokDiv.style.display = 'none';
+        terkepDiv.style.display = 'none';
         galeriaDiv.style.display = 'none';
-        kapcsolatDiv.style.display = 'none';
+        kapcsolatDiv.style.display = 'block';
         kosarPanel.classList.remove('megnyitva');
     }
 
@@ -169,8 +177,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     informacioSavok[1].addEventListener('click', function () {
         mindenDivElrejt();
-        programokDiv.style.display = 'block';
-        programokDiv.scrollIntoView({ behavior: 'smooth' });
+        terkepDiv.style.display = 'block';
+        terkepDiv.scrollIntoView({ behavior: 'smooth' });
     });
 
     informacioSavok[2].addEventListener('click', function () {
@@ -190,7 +198,6 @@ document.addEventListener("DOMContentLoaded", function () {
             termekHozzaadas(nev, ar);
         });
     });
-
 
 
     const vasarlasGomb = document.getElementById('vasarlas_gomb');
@@ -262,5 +269,21 @@ document.addEventListener("DOMContentLoaded", function () {
         alert('Köszönjük a vásárlást! 😊');
     });
 
-
+    //Kép slider
+    const swiper = new Swiper('.sample-slider', {
+        loop: true,                         
+        slidesPerView: 2,                   
+        centeredSlides : true,              
+        spaceBetween: 20,                   
+        autoplay: {                         
+            delay: 5000,  
+        },   
+        pagination: {                       
+            el: '.swiper-pagination',
+        },
+        navigation: {                       
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    })
 });
